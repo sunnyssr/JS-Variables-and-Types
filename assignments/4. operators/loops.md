@@ -75,12 +75,12 @@ for(let i=1; i<=10;i++){
 
 // Your code goes here
 
-for(let i=0; i<20; i+=5){
-    let str="";
-    for(let j=i+1; j<=i+5; j++){
-        str = str + j +", ";
+for(let i=1, str=""; i<=20; i++){
+        str = str + i +", ";
+    if(i%5==0){
+        console.log(str);
+        str = "";
     }
-    console.log(str);
 }
 
 ```
