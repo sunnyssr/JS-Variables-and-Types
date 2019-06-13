@@ -44,7 +44,7 @@ let isGuestTwoVeg = false;
 // Your code goes here
 if(isGuestOneVeg && isGuestTwoVeg){
     console.log("Only offer up vegan dishes.")
-}else if(isGuestOneVeg && isGuestTwoVeg){
+}else if(isGuestOneVeg || isGuestTwoVeg){
     console.log("Make sure to offer up some vegan options.")
 }else{
     console.log("Offer up anything on the menu");
