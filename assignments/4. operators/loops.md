@@ -14,17 +14,24 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-var numberOfPhones = 0;
-// while(bank_balance>PHONE_PRICE){
-//     bank_balance -= PHONE_PRICE;
-//     numberOfPhones++;
-// }
 calculateTax = function(amount){
     return TAX_RATE * amount;
 }
 formatAmount = function(amount){
     return ("$ "+(amount.toFixed(2)))
 }
+var numberOfPhones = 0;
+var numberOfAccessories = 0;
+while(amount<bank_balance){
+    amount += PHONE_PRICE;
+    numberOfPhones++;  
+    if(amount<SPENDING_THRESHOLD){
+        amount += ACCESSORY_PRICE;
+        numberOfAccessories++;
+    }
+}
+amount = amount + calculateTax(amount);
+console.log(formatAmount(amount));
 ```
  ⛑ Answer of the above will `$334.76`.
 
@@ -47,7 +54,7 @@ for(let i=0; i<=20; i++){
 // Your code goes here
 
 for(let i=0; i<=10;i++){
-        console.log(i+" * 9 = "+(i*9));
+    console.log(i+" * 9 = "+(i*9));
 }
 ```
 
