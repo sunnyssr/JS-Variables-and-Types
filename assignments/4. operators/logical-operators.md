@@ -42,13 +42,16 @@ false || "Hey" || undefined // "Hey"
 let isGuestOneVeg = false;
 let isGuestTwoVeg = false;
 // Your code goes here
-if(isGuestOneVeg && isGuestTwoVeg){
-    console.log("Only offer up vegan dishes.")
-}else if(isGuestOneVeg || isGuestTwoVeg){
-    console.log("Make sure to offer up some vegan options.")
-}else{
-    console.log("Offer up anything on the menu");
-}
+
+console.log((isGuestOneVeg && isGuestTwoVeg && "Only Offer up vegan dishes") || ((isGuestOneVeg || isGuestTwoVeg) && "Make sure to offer up some vegan options.") || "Offer up anything on the menu");
+
+// if(isGuestOneVeg && isGuestTwoVeg){
+//     console.log("Only offer up vegan dishes.")
+// }else if(isGuestOneVeg || isGuestTwoVeg){
+//     console.log("Make sure to offer up some vegan options.")
+// }else{
+//     console.log("Offer up anything on the menu");
+// }
 ```
 
 
@@ -59,13 +62,15 @@ if(isGuestOneVeg && isGuestTwoVeg){
 ```js
 let temperature = 4;
 // Your code goes here
-if(temperature<32){
-    alert("It is freezing outside");
-}else if(temperature>110){
-    alert( "It is hot outside");
-}else{
-    alert("Go for it. It is pretty nice out")
-}
+alert(((temperature<32) && "It is freezing outside") || ((temperature>110) && "It is hot outside") || "Go for it. It is pretty nice out");
+
+// if(temperature<32){
+//     alert("It is freezing outside");
+// }else if(temperature>110){
+//     alert( "It is hot outside");
+// }else{
+//     alert("Go for it. It is pretty nice out")
+// }
 ```
 
 4. 🎖 Output of this
